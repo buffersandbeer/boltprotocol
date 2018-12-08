@@ -72,7 +72,7 @@ Server: <disconnect>
 
 === Message transfer encoding
 
-Bolt encodings each message using a chunked transfer encoding.
+Bolt encodes each message using a chunked transfer encoding.
 Each message is transferred as one or more `chunks` of data.
 Each chunk starts with a two-byte header, an unsigned big-endian 16-bit integer, representing the size of the chunk not including the header.
 A message can be divided across multiple chunks, allowing client and server alike to transfer large messages without having to determine the length of the entire message in advance.
